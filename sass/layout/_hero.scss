@@ -1,0 +1,90 @@
+.hero{
+    // background-color: red;
+
+    .hero-group{
+
+        display: flex;
+        margin-top: 100px;
+
+        @include respond(smalldesktop){
+            flex-direction: column;
+            align-items: center;
+        }
+
+        //Web Development, Portfolio
+        .hero__left{
+
+            background-color: $black;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include respond(smalldesktop){
+                width: 100%;
+                padding: 100px;
+                align-items: center;
+            }
+
+            .hero__title, .hero__subtitle{
+                text-transform: uppercase;
+                color: $white;
+                text-align: center;                
+            }
+
+            .hero__title{
+                font-size: 1.5em;
+                letter-spacing: 10px;
+
+                @include respond(mediumdesktop){
+                    font-size: 1em;
+                }
+            }
+
+            .hero__subtitle{
+                font-size: 5em;
+                font-weight: 400;
+
+                @include respond(mediumdesktop){
+                    font-size: 4em;
+                }
+            }
+        }
+
+        //From design to reality, Front-end Web Developer
+        .hero__right{
+
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include respond(smalldesktop){
+                align-items: center;
+                padding-top: 50px;
+            }
+
+            .hero__slogan{
+                text-align: left;
+                font-size: 4em;
+                padding: 30px 0px 30px 120px;
+                width: 575px;
+
+                @include respond(mediumdesktop){
+                    font-size: 3.5em;
+                    padding: 30px 0px 30px 80px;
+                    width: 479px;
+                }
+
+                @include respond(smalldesktop){
+                    padding: 15px;
+                    font-size: 2.5em;
+                    text-align: center;
+                    width: 700px;
+                }
+            }
+
+        }
+
+    }
+}

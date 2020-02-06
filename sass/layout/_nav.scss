@@ -1,0 +1,143 @@
+header{
+ 
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .logo{
+        width: 100px;
+    }
+
+    //The Button itself
+    .nav-toggle{
+        padding: .5em .5em;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1000;
+        position: absolute;
+        top: 7.8%;
+        right: 9.5%;
+
+        //The middle hamburger line
+        .hamburger{
+            
+            display: block;
+            position: relative;
+        }
+
+        //All 3 hamburger lines
+        .hamburger,
+        .hamburger::before,
+        .hamburger::after{
+            background: peru;
+            width: 2.5em;
+            height: 3px;
+            border-radius: 1em;
+            transition: transform 250ms ease-in-out;
+        }
+
+        //The top and bottom hamburger lines
+        .hamburger::before,
+        .hamburger::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+
+        //The top hamburger line
+        .hamburger::before{
+            bottom: 8px;
+        }
+
+        //The bottom hamburger line
+        .hamburger::after{
+            top: 8px;
+        }
+    }
+
+    nav{
+
+        position: fixed;
+        background: $black;
+        color: $white;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+
+        transform: translateX(100%);
+        transition: transform 250ms ease-in-out;
+
+        .nav__list{
+            list-style: none;
+            display: flex;
+            position: relative;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav__logo{
+
+            width: 100px;
+            position: absolute;
+            top: 7.2%;
+            left: 10%;
+        }
+
+        .nav__item{
+
+            margin: 1.6em;
+
+            .nav__link{
+                text-decoration: none;
+                font-size: 3em;
+                color: $white;
+            }
+
+            .nav__link:hover{
+                color: peru;
+            }
+    
+            #nav__link__home{
+                font-size: 5em;
+            }
+
+        }
+        
+    }
+
+}
+
+.nav-open{
+    
+    nav{
+        transform: translateX(0%);   
+    }
+
+    .nav-toggle{
+        position: fixed;
+    }
+
+    .hamburger{
+        transform: rotate(0.625turn);
+    }
+
+    .hamburger::after{
+        opacity: 0;
+    }
+
+    .hamburger::before{
+        transform: rotate(90deg) translateX(8px);
+    }
+
+    
+}

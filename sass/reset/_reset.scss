@@ -13,7 +13,20 @@ body{
 
 //CHANGE FOCUS COLORS DEPENDING ON YOUR DESIGN
 
-:focus{
-    outline: 3px solid rgb(132, 130, 255);
-    outline-offset: 3px;
+// :focus{
+//     outline: 3px solid rgb(132, 130, 255);
+//     outline-offset: 3px;
+// }
+
+.container{
+    width: 80%;
+}
+
+hr{
+    margin: 120px auto;
+    width: 50%;
+
+    @include respond(smalldesktop){
+        margin: 80px auto;
+    }
 }
