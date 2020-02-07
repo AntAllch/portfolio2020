@@ -334,6 +334,10 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+:focus {
+  outline: 3px solid peru(132, 130, 255);
+  outline-offset: 3px; }
+
 .container {
   width: 80%; }
 
