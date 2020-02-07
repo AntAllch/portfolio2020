@@ -101,6 +101,10 @@ header{
                 text-decoration: none;
                 font-size: 3em;
                 color: $white;
+
+                @include respond(mobile){
+                    font-size: 2em;
+                }
             }
 
             .nav__link:hover{
@@ -109,6 +113,10 @@ header{
     
             #nav__link__home{
                 font-size: 5em;
+
+                @include respond(mobile){
+                    font-size: 3em;
+                }
             }
 
         }

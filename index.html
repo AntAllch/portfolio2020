@@ -23,7 +23,7 @@
         <ul class="nav__list">
             <img class="nav__logo" src="img/Logo-white.svg" alt="NAV-LOGO">
             <li class="nav__item"><a href="" class="nav__link" id="nav__link__home">Home</a></li>
-            <li class="nav__item"><a href="" class="nav__link">- Insure -</a></li>
+            <li class="nav__item"><a href="index.html#insure" class="nav__link">- Insure -</a></li>
             <li class="nav__item"><a href="" class="nav__link">- FutureVision -</a></li>
             <li class="nav__item"><a href="" class="nav__link">- Allchorne Bar -</a></li>
         </ul>
@@ -62,26 +62,52 @@
 
     <div class="container">
 
-        <div class="work-header">
-            <p class="work-header__title">Webpage / Websites</p>
+        <div class="section-header">
+            <p class="section-header__title">Webpage / Websites</p>
         </div>
 
         <div class="portfolio">
 
             <!-- Portfolio work #1 -->
-            <a href="https://antallch.github.io/insure/" class="portfolio__item" target="_blank">
+            <a href="https://antallch.github.io/insure/" class="portfolio__item" id="insure" target="_blank">              
                 <img src="img/insure.jpg" alt="" class="portfolio__img">
             </a>
+            <div class="portfolio__links">
+                <button class="portfolio__button">
+                    <a href="https://antallch.github.io/insure/" class="portfolio__button__link" target="_blank">Live Demo</a>
+                </button>
+                <button class="portfolio__button">
+                    <a href="https://github.com/AntAllch/insure" class="portfolio__button__link" target="_blank">Github Repo</a>
+                </button>
+            </div>
 
             <!-- Portfolio work #2 -->
-            <a href="https://antallch.github.io/futurevision/" class="portfolio__item" target="_blank">
+            <a href="https://antallch.github.io/futurevision/" class="portfolio__item" id="future" target="_blank">
                 <img src="img/fv.JPG" alt="" class="portfolio__img">
             </a>
+            <div class="portfolio__links">
+                <button class="portfolio__button">
+                    <a href="https://antallch.github.io/futurevision/" class="portfolio__button__link" target="_blank">Live Demo</a>
+                </button>
+                <button class="portfolio__button">
+                    <a href="https://github.com/AntAllch/futurevision" class="portfolio__button__link" target="_blank">Github Repo</a>
+                </button>
+            </div>
+            <hr class="portfolio__hr">
 
             <!-- Portfolio work #3 -->
-            <a href="https://antallch.github.io/allchornebar/" class="portfolio__item" target="_blank">
+            <a href="https://antallch.github.io/allchornebar/" class="portfolio__item" id="bar" target="_blank">
                 <img src="img/ab.JPG" alt="" class="portfolio__img">
             </a>
+            <div class="portfolio__links">
+                <button class="portfolio__button">
+                    <a href="https://antallch.github.io/allchornebar/" class="portfolio__button__link" target="_blank">Live Demo</a>
+                </button>
+                <button class="portfolio__button">
+                    <a href="https://github.com/AntAllch/allchornebar" class="portfolio__button__link" target="_blank">Github Repo</a>
+                </button>
+            </div>
+
         </div>
 
     </div>
@@ -90,6 +116,31 @@
 <!-- END OF WORK SECTION -->
 
 <hr>
+
+<!-- ABOUT SECTION -->
+<section class="about">
+
+    <div class="container">
+
+        <div class="section-header">
+            <p class="section-header__title">About Anthony</p>
+        </div>
+    
+        <div class="about-text">
+            <p class="about-text__desc">I'm relatively new the web development scene, having only 
+                started learning in 2018, but that isn't where my love for coding 
+                started. Back in 2014 is where it all started, during my days at University 
+                where I learned a bit of C++, after a few weeks of programming, I 
+                decided that it wasn't for me and that's where it ended. Until 2018 when 
+                I realised just how much I wanted to make a career in the web 
+                development industry, specifically front-end.. And that's where we are 
+                right now</p>
+        </div>
+
+    </div>
+    
+</section>
+<!-- END OF ABOUT SECTION -->
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/index.js"></script>

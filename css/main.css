@@ -9,7 +9,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 100px; }
+  margin-top: 6em; }
   @media screen and (max-width: 1200px) {
     .hero .hero-group {
       -webkit-box-orient: vertical;
@@ -19,6 +19,9 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; } }
+  @media screen and (max-width: 650px) {
+    .hero .hero-group {
+      margin-top: 4em; } }
   .hero .hero-group .hero__left {
     background-color: #000000;
     width: 50%;
@@ -49,12 +52,18 @@
       @media screen and (max-width: 1500px) {
         .hero .hero-group .hero__left .hero__title {
           font-size: 1em; } }
+      @media screen and (max-width: 650px) {
+        .hero .hero-group .hero__left .hero__title {
+          letter-spacing: 5px; } }
     .hero .hero-group .hero__left .hero__subtitle {
       font-size: 5em;
       font-weight: 400; }
       @media screen and (max-width: 1500px) {
         .hero .hero-group .hero__left .hero__subtitle {
           font-size: 4em; } }
+      @media screen and (max-width: 650px) {
+        .hero .hero-group .hero__left .hero__subtitle {
+          font-size: 2.7em; } }
   .hero .hero-group .hero__right {
     width: 50%;
     display: -webkit-box;
@@ -73,6 +82,9 @@
         -ms-flex-align: center;
         align-items: center;
         padding-top: 50px; } }
+    @media screen and (max-width: 650px) {
+      .hero .hero-group .hero__right {
+        padding-top: 25px; } }
     .hero .hero-group .hero__right .hero__slogan {
       text-align: left;
       font-size: 4em;
@@ -89,22 +101,10 @@
           font-size: 2.5em;
           text-align: center;
           width: 700px; } }
-
-.work .work-header {
-  background-color: #000000;
-  padding: 1em;
-  margin-bottom: 3em; }
-  .work .work-header .work-header__title {
-    font-size: 4em;
-    color: #fff;
-    text-align: center;
-    letter-spacing: 10px; }
-    @media screen and (max-width: 1500px) {
-      .work .work-header .work-header__title {
-        font-size: 3.5em; } }
-    @media screen and (max-width: 1200px) {
-      .work .work-header .work-header__title {
-        font-size: 2.5em; } }
+      @media screen and (max-width: 650px) {
+        .hero .hero-group .hero__right .hero__slogan {
+          font-size: 1.5em;
+          padding: 8px; } }
 
 .work .portfolio {
   display: -webkit-box;
@@ -119,22 +119,70 @@
   align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-  height: 1000px; }
+  justify-content: space-between; }
   .work .portfolio .portfolio__item {
-    background: peru;
-    height: 30.255%; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    @media screen and (max-width: 650px) {
+      .work .portfolio .portfolio__item {
+        margin-bottom: 1em; } }
     .work .portfolio .portfolio__item .portfolio__img {
       width: 800px;
-      border: 8px solid #000000;
+      -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
       -webkit-transition: opacity 150ms linear;
       -o-transition: opacity 150ms linear;
-      transition: opacity 150ms linear; }
-      .work .portfolio .portfolio__item .portfolio__img:hover {
-        opacity: 0; }
+      transition: opacity 150ms linear;
+      position: relative; }
       @media screen and (max-width: 1200px) {
         .work .portfolio .portfolio__item .portfolio__img {
           width: 600px; } }
+      @media screen and (max-width: 650px) {
+        .work .portfolio .portfolio__item .portfolio__img {
+          width: 300px; } }
+  .work .portfolio .portfolio__links:not(:last-of-type) {
+    margin-bottom: 6em; }
+  @media screen and (max-width: 650px) {
+    .work .portfolio .portfolio__links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .work .portfolio .portfolio__links:not(:last-of-type) {
+        margin-bottom: 3em; } }
+  .work .portfolio .portfolio__links .portfolio__button {
+    margin: 2.5em 2.5em 0em;
+    background: transparent;
+    border: none;
+    letter-spacing: 3px;
+    display: inline-block; }
+    @media screen and (max-width: 650px) {
+      .work .portfolio .portfolio__links .portfolio__button {
+        margin: 1em; } }
+    .work .portfolio .portfolio__links .portfolio__button .portfolio__button__link {
+      text-decoration: none;
+      color: black;
+      padding: 10px 25px;
+      border: 1px solid #000000;
+      font-size: 1.5em; }
+      .work .portfolio .portfolio__links .portfolio__button .portfolio__button__link:hover {
+        color: #fff;
+        background: #000000; }
+      @media screen and (max-width: 650px) {
+        .work .portfolio .portfolio__links .portfolio__button .portfolio__button__link {
+          padding: 5px 12.5px;
+          font-size: 1em; } }
 
 header {
   width: 80%;
@@ -229,10 +277,16 @@ header {
         text-decoration: none;
         font-size: 3em;
         color: #fff; }
+        @media screen and (max-width: 650px) {
+          header nav .nav__item .nav__link {
+            font-size: 2em; } }
       header nav .nav__item .nav__link:hover {
         color: peru; }
       header nav .nav__item #nav__link__home {
         font-size: 5em; }
+        @media screen and (max-width: 650px) {
+          header nav .nav__item #nav__link__home {
+            font-size: 3em; } }
 
 .nav-open nav {
   -webkit-transform: translateX(0%);
@@ -255,6 +309,20 @@ header {
   -ms-transform: rotate(90deg) translateX(8px);
   transform: rotate(90deg) translateX(8px); }
 
+.about .about-text {
+  width: 80%;
+  margin: 0 auto 5em;
+  font-size: 2em; }
+  @media screen and (max-width: 1200px) {
+    .about .about-text {
+      font-size: 1.5em;
+      width: 90%; } }
+  @media screen and (max-width: 650px) {
+    .about .about-text {
+      font-size: 1em;
+      width: 90%;
+      text-align: center; } }
+
 *,
 *::before,
 *::after {
@@ -272,7 +340,52 @@ body {
 
 hr {
   margin: 120px auto;
-  width: 50%; }
+  width: 100%;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
   @media screen and (max-width: 1200px) {
     hr {
       margin: 80px auto; } }
+  @media screen and (max-width: 650px) {
+    hr {
+      margin: 40px auto; } }
+
+.portfolio__hr {
+  margin: 0px auto 75px;
+  width: 90%;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
+  @media screen and (max-width: 650px) {
+    .portfolio__hr {
+      margin: 0px auto 50px; } }
+
+.section-header {
+  background-color: #000000;
+  padding: 1em;
+  margin-bottom: 5em; }
+  @media screen and (max-width: 650px) {
+    .section-header {
+      margin-bottom: 2em; } }
+  .section-header .section-header__title {
+    font-size: 4em;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 10px; }
+    @media screen and (max-width: 1500px) {
+      .section-header .section-header__title {
+        font-size: 3.5em; } }
+    @media screen and (max-width: 1200px) {
+      .section-header .section-header__title {
+        font-size: 2.5em; } }
+    @media screen and (max-width: 650px) {
+      .section-header .section-header__title {
+        font-size: 1.5em;
+        letter-spacing: 0px; } }

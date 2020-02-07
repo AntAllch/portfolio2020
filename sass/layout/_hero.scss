@@ -4,11 +4,15 @@
     .hero-group{
 
         display: flex;
-        margin-top: 100px;
+        margin-top: 6em;
 
         @include respond(smalldesktop){
             flex-direction: column;
             align-items: center;
+        }
+
+        @include respond(mobile){
+            margin-top: 4em;
         }
 
         //Web Development, Portfolio
@@ -39,6 +43,11 @@
                 @include respond(mediumdesktop){
                     font-size: 1em;
                 }
+
+                @include respond(mobile){
+                    // font-size: 0.5em;
+                    letter-spacing: 5px;
+                }
             }
 
             .hero__subtitle{
@@ -47,6 +56,10 @@
 
                 @include respond(mediumdesktop){
                     font-size: 4em;
+                }
+
+                @include respond(mobile){
+                    font-size: 2.7em;
                 }
             }
         }
@@ -62,6 +75,10 @@
             @include respond(smalldesktop){
                 align-items: center;
                 padding-top: 50px;
+            }
+
+            @include respond(mobile){
+                padding-top: 25px;
             }
 
             .hero__slogan{
@@ -81,6 +98,11 @@
                     font-size: 2.5em;
                     text-align: center;
                     width: 700px;
+                }
+
+                @include respond(mobile){
+                    font-size: 1.5em;
+                    padding: 8px;
                 }
             }
 
