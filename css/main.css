@@ -193,7 +193,7 @@ header {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  header .logo {
+  header .logo img {
     width: 100px; }
   header .nav-toggle {
     padding: .5em .5em;
