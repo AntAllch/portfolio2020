@@ -70,7 +70,8 @@
             width: 50%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            // justify-content: center;
+            // background: pink;
 
             @include respond(smalldesktop){
                 align-items: center;
@@ -79,6 +80,7 @@
 
             @include respond(mobile){
                 padding-top: 25px;
+                width: 100%;
             }
 
             .hero__slogan{
@@ -97,12 +99,13 @@
                     padding: 15px;
                     font-size: 2.5em;
                     text-align: center;
-                    width: 700px;
+                    width: 650px;
                 }
 
                 @include respond(mobile){
                     font-size: 1.5em;
                     padding: 8px;
+                    width: 350px;
                 }
             }
 
