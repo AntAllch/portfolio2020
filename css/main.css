@@ -196,6 +196,7 @@ header {
   header .logo img {
     width: 100px; }
   header .nav-toggle {
+    display: none;
     padding: .5em .5em;
     background: transparent;
     border: none;
@@ -230,6 +231,7 @@ header {
     header .nav-toggle .hamburger::after {
       top: 8px; }
   header nav {
+    display: none;
     position: fixed;
     background: #000000;
     color: #fff;

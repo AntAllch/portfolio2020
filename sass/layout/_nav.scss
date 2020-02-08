@@ -1,5 +1,6 @@
 header{
  
+
     width: 80%;
     margin: 0 auto;
     margin-top: 50px;
@@ -15,6 +16,9 @@ header{
 
     //The Button itself
     .nav-toggle{
+
+        display: none;
+
         padding: .5em .5em;
         background: transparent;
         border: none;
@@ -63,6 +67,8 @@ header{
     }
 
     nav{
+
+        display: none;
 
         position: fixed;
         background: $black;
