@@ -68,6 +68,7 @@
                     padding: 10px 25px;
                     border: 1px solid $black;
                     font-size: 1.5em;
+                    transition: all 125ms ease-in-out;
     
                     &:hover{
                         color: $white;

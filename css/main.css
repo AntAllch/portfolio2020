@@ -174,7 +174,10 @@
       color: black;
       padding: 10px 25px;
       border: 1px solid #000000;
-      font-size: 1.5em; }
+      font-size: 1.5em;
+      -webkit-transition: all 125ms ease-in-out;
+      -o-transition: all 125ms ease-in-out;
+      transition: all 125ms ease-in-out; }
       .work .portfolio .portfolio__links .portfolio__button .portfolio__button__link:hover {
         color: #fff;
         background: #000000; }
