@@ -85,12 +85,11 @@
 
             .hero__slogan{
                 text-align: left;
-                font-size: 4em;
+                font-size: 3em;
                 padding: 30px 0px 30px 120px;
                 width: 575px;
 
                 @include respond(mediumdesktop){
-                    font-size: 3.5em;
                     padding: 30px 0px 30px 80px;
                     width: 479px;
                 }

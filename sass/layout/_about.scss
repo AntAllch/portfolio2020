@@ -3,9 +3,11 @@
     .about-text{
 
         width: 80%;
+        max-width: 850px;
         margin: 0 auto 5em;
         font-size: 2em;
-        // text-align: ;
+        text-align: center;
+
 
         @include respond(smalldesktop){
             font-size: 1.5em;
@@ -15,7 +17,6 @@
         @include respond(mobile){
             font-size: 1em;
             width: 90%;
-            text-align: center;
         }
 
     }
