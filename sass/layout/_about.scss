@@ -1,24 +1,125 @@
 .about{
+    background-color: $white;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%); //TL TR BR BL, X Y - Clockwise direction
+    color: $dark-blue;
+    text-align: center;
+    padding: 4em 0 10em;
 
-    .about-text{
+    @include respond(tablet){
+        text-align: left;
+    }
 
-        width: 80%;
-        max-width: 850px;
-        margin: 0 auto 5em;
-        font-size: 2em;
-        text-align: center;
+    @include respond(desktop){
+        padding: 5em 0 8em;
+    }
 
+    .about-container{
 
-        @include respond(smalldesktop){
-            font-size: 1.5em;
-            width: 90%;
+        @include respond(desktop){
+            display: flex;
+        }
+    }
+
+    .about-title{
+        margin-bottom: 1rem;
+    }
+
+    .skills-subtitle{
+        text-transform: capitalize;
+        font-size: 1.3em;
+        font-weight: $fw-semibold;
+        margin-bottom: 0.5rem;
+    }
+
+    .aboutme-group{
+        margin-bottom: 4em;
+
+        
+        @include respond(desktop){
+            margin-right: 6em;
         }
 
-        @include respond(mobile){
-            font-size: 1em;
-            width: 90%;
+        .aboutme-desc{
+            font-size: 1.1em;
+
+            @include respond(tablet){
+                max-width: 390px;
+            }
+        }
+    }
+
+    .frontend-group{
+        margin-bottom: 1.7em;
+    }
+
+
+    .skills-group{
+
+        .skills-list{ //ul
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+
+            @include respond(tablet){
+                margin: 0;
+                justify-content: flex-start;
+            }
+        }
+
+        .skills-item{ //li
+            list-style: none;
+            width: 38px;
+
+            &:nth-of-type(3){ //SASS Icon
+                width: 60px;
+            }
+
+            &:nth-of-type(4){ //JS Icon
+                width: 43px;
+            }
+
+            &:nth-of-type(5){ //jQuery Icon
+                width: 85px;
+            }
+
+            transform: scale(0.8); //Makes sure all the front-end icons scale up together
         }
 
     }
 
+    .design-group{
+
+        .design-list{ //ul
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 180px;
+            margin: 0 auto;
+
+            @include respond(tablet){
+                margin: 0;
+                justify-content: flex-start;
+            }
+        }
+
+        .design-item{ //li
+            list-style: none;
+            width: 35px;
+
+            &:not(:last-of-type){
+                margin-right: 0.8em;
+            }
+
+            &:nth-of-type(4){
+                width: 23px;
+            }
+            
+            transform: scale(); //Makes sure all the design icons scale up together
+        }
+
+    }
 }

@@ -1,0 +1,38 @@
+header{
+    background-color: $dark-blue;
+    box-shadow: 0 3px 10px rgba(black, 0.6);
+    padding: 2em 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    @include respond(desktop){
+        background-color: $dark-blue;
+        // box-shadow: none;
+        padding: 1.0em 0; //Up/Down Left/Right
+
+    }
+
+    svg{
+        width: 50px;
+    }
+
+    .header-links{
+        display: flex;
+        align-items: center;
+
+        .link{ //Work
+            margin-right: 1em;
+            font-weight: $fw-regular;
+            color: $white;
+            text-decoration: none;
+
+            @include respond(tablet){
+                margin-right: 2em;
+            }
+        }
+            
+    }
+}

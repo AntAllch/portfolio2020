@@ -3,79 +3,34 @@
 *::after{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
-    // outline: 1px solid greenyellow;
 }
 
-body{
+body,
+input,
+textarea{
     box-sizing: border-box;
 }
 
-
-//CHANGE FOCUS COLORS DEPENDING ON YOUR DESIGN
-
-:focus{
-    outline: none;
+html,
+body{
+    overflow-x: hidden;
 }
 
-.container{
-    width: 80%;
+body{
+    background-color: $dark-blue;
 }
 
-hr{
-    margin: 120px auto;
-    width: 100%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 
-    @include respond(smalldesktop){
-        margin: 80px auto;
-    }
+// ENABLE AND CHANGE THE FOCUS COLORS DEPENDING ON YOUR DESIGN
 
-    @include respond(mobile){
-        margin: 40px auto;
-    }
-}
+// :focus{
+//     outline: 3px solid rgb(132, 130, 255);
+//     outline-offset: 3px;
+// }
 
-.portfolio__hr{
-    margin: 0px auto 75px;
-    width: 90%;
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 
-    @include respond(mobile){
-        margin: 0px auto 50px;
-    }
-}
+// ENABLE THIS OUTLINE FOR DEBUGGING PURPOSES, E.G. HORIZONTAL SCROLLING
 
-.section-header{
-
-    background-color: $black;
-    padding: 0.5em;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 5em;
-
-    @include respond(mobile){
-        margin-bottom: 2em;
-    }
-
-    .section-header__title{
-        font-size: 3em;
-        color: $white;
-        text-align: center;
-        letter-spacing: 10px;
-
-        @include respond(smalldesktop){
-            font-size: 2.5em;
-        }
-
-        @include respond(mobile){
-            font-size: 1.5em;
-            letter-spacing: 0px;
-        }
-    }
-
-}
+// *{
+//     outline: 2px solid red;
+// }

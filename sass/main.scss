@@ -1,5 +1,3 @@
-
-
 @import "base/containers";
 @import "base/typography";
 
@@ -7,12 +5,15 @@
 @import "abstracts/mixins";
 @import "abstracts/responsive";
 @import "abstracts/typography";
+@import "abstracts/spacing";
+@import "abstracts/transitions";
 
 @import "components/buttons";
 
+@import "layout/header";
 @import "layout/hero";
-@import "layout/work";
-@import "layout/nav";
 @import "layout/about";
+@import "layout/work";
+@import "layout/contact";
 
 @import "reset/reset";

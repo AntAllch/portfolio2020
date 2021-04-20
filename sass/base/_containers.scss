@@ -1,7 +1,27 @@
-.container{
+.header-container,
+.hero-container,
+.about-container,
+.work-container,
+.contact-container{
+    width: 80%;
+    margin: 0 auto;
 
-    // CHANGE WIDTH AND MARGIN TO SUIT YOUR DESIGN
-    
-    // width: 82%;
-     margin: 0 auto;
+    // @include respond(tablet){
+    //     width:
+    // }
 }
+
+.hero-container,
+.about-container,
+.work-container,
+.contact-container{
+    max-width: 1080px;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1720px;
+}
+

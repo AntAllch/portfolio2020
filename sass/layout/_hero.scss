@@ -1,114 +1,72 @@
 .hero{
     // background-color: red;
+    background-image: url("/img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    // padding-top: 13em;
+    height: 100vh;
+    text-align: center;
+    
+    @include respond(tablet){
+        text-align: left;
+        // padding-top: 20em;
+    }
 
-    .hero-group{
+    .hero-content{
 
-        display: flex;
-        margin-top: 6em;
+        padding-top: 13em;
 
-        @include respond(smalldesktop){
-            flex-direction: column;
-            align-items: center;
+        @include respond(tablet){
+            padding-top: 20em;
         }
 
-        @include respond(mobile){
-            margin-top: 4em;
+        @include respond(desktop){
+            padding-top: 50%;
+            transform: translateY(-25%);
         }
 
-        //Web Development, Portfolio
-        .hero__left{
+        .hero-title{
 
-            background-color: $black;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            @include respond(smalldesktop){
-                width: 100%;
-                padding: 100px;
-                align-items: center;
-            }
-
-            .hero__title, .hero__subtitle{
-                text-transform: uppercase;
-                color: $white;
-                text-align: center;                
-            }
-
-            .hero__title{
-                font-size: 1.5em;
-                letter-spacing: 10px;
-
-                @include respond(mediumdesktop){
-                    font-size: 1em;
-                }
-
-                @include respond(mobile){
-                    // font-size: 0.5em;
-                    letter-spacing: 5px;
-                }
-            }
-
-            .hero__subtitle{
-                font-size: 5em;
-                font-weight: 400;
-
-                @include respond(mediumdesktop){
-                    font-size: 4em;
-                }
-
-                @include respond(mobile){
-                    font-size: 2.7em;
-                }
+            @include respond(tablet){
+                font-size: 2.3em;
             }
         }
 
-        //From design to reality, Front-end Web Developer
-        .hero__right{
-
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            // justify-content: center;
-            // background: pink;
-
-            @include respond(smalldesktop){
-                align-items: center;
-                padding-top: 50px;
+        .hero-banner{
+            color: $accent-blue;
+            text-transform: uppercase;
+            font-size: 3.5em;
+            font-weight: $fw-bold;
+            // margin-bottom: $hero-banner-margin;
+            margin: -15px 0 0.7em 0;
+    
+            @include respond(tablet){
+                font-size: 6em;
+                margin: -30px 0 0 0;
             }
 
-            @include respond(mobile){
-                padding-top: 25px;
-                width: 100%;
+            @include respond(desktop){
+                font-size: 7em;
+                margin: -30px 0 0 0;
+            }
+        }
+    
+        .hero-desc{
+            font-size: 1.15em;
+            margin-bottom: 2em;
+            max-width: 450px;
+
+            @include respond(tablet){
+                margin-bottom: 3em;
             }
 
-            .hero__slogan{
-                text-align: left;
-                font-size: 3em;
-                padding: 30px 0px 30px 120px;
-                width: 575px;
-
-                @include respond(mediumdesktop){
-                    padding: 30px 0px 30px 80px;
-                    width: 479px;
-                }
-
-                @include respond(smalldesktop){
-                    padding: 15px;
-                    font-size: 2.5em;
-                    text-align: center;
-                    width: 650px;
-                }
-
-                @include respond(mobile){
-                    font-size: 1.5em;
-                    padding: 8px;
-                    width: 350px;
-                }
+            @include respond(desktop){
+                margin-bottom: 5em;
             }
-
         }
 
     }
+
+   
 }

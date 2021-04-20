@@ -1,91 +1,191 @@
 .work{
 
-    .portfolio{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+    color: $light-grey;
+    padding: 6em 0;
 
+    .work-title{
+        margin-bottom: 4.5em;
+        position: relative;
 
-        .portfolio__item{
+        &::before{
+            content: "";
+            width: 80%;
+            height: 1px;
+            background-color: $light-grey;
+            position: absolute;
+            top: 120px;
+        }
+    }
+    
+    .website-groups{
 
-            display: flex;
-            flex-direction: column;
-            align-items: center;             
-
-            @include respond(mobile){
-
-                margin-bottom: 1em ;
+        .right{
+            @include respond(desktop){
+                text-align: right;
             }
-
-            .portfolio__img{
-                width: 800px;
-                box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
-                transition: opacity 150ms linear;
-                position: relative;
-
-                @include respond(smalldesktop){
-                    width: 600px;
-                }
-
-                @include respond(mobile){
-                    width: 280px;
-                }
-            
-            }
-
         }
 
-        .portfolio__links{
+        .website-group{
 
-            &:not(:last-of-type){
-                margin-bottom: 6em;
+            position: relative;
+
+            &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 4em
+                margin-bottom: 3em;
             }
 
-            @include respond(mobile){
+            @include respond(desktop){
                 display: flex;
-                flex-direction: column;
-                
-                &:not(:last-of-type){
-                    margin-bottom: 3em;
+
+                &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 6em
+                    margin-bottom: 6em;
                 }
             }
+    
+            .website-img{
+                width: 100%;
+                height: 200px;
+                background-color: cyan;
+                border-radius: 3px 3px 0 0; //TL TR BR BL
+                margin-bottom: 0.7em;
+                object-fit: cover;
 
-            .portfolio__button{
-                margin: 2.5em 2.5em 0em;
-                background: transparent;
-                border: none;
-                letter-spacing: 3px;
-                display: inline-block;
-    
-                @include respond(mobile){
-                    margin: 1em;
+                @include respond(tablet){
+                    height: 320px;
                 }
-    
-                .portfolio__button__link{
-                    text-decoration: none;
-                    color: black;
-                    padding: 10px 25px;
-                    border: 1px solid $black;
-                    font-size: 1.5em;
-                    transition: all 125ms ease-in-out;
-    
-                    &:hover{
-                        color: $white;
-                        background: $black;
-                    }
-    
-                    @include respond(mobile){
-                        padding: 5px 12.5px;
-                        font-size: 1em;
-                    }
+
+                @include respond(desktop){
+                    height: 420px;
+                    border-radius: 3px 3px 3px 3px; //TL TR BR BL
                 }
             }
+    
+            // .llp-img,
+            // .arch-img{
+            //     background-size: cover;
+            //     background-position: top;
+            // }
+    
+            // .llp-img{
+            //     background-image: url("/img/llp.jpg");
+            // }
+    
+            // .arch-img{
+            //     background-image: url("/img/archstudio.jpg");
+            // }
+    
+            .website-info{
+                background-color: $mid-blue;
+                padding: 1rem;
+                border-radius: 0 0 3px 3px; //TL TR BR BL
 
+                @include respond(desktop){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    background-color: transparent;
+                    width: 40%;
+                    padding-top: 3em;
+                }
+    
+                .site-title{ //LEWIS LANDON PHOTOGRAPHY, ARCH STUDIO
+                    color: $accent-blue;
+                    text-transform: uppercase;
+                    font-weight: $fw-bold;
+                    margin-bottom: 0.3em;
+                    font-size: 1.1em;
+                    z-index: 99;
+
+                    @include respond(tablet){
+                        font-size: 1.3em;
+                    }
+
+                    @include respond(desktop){
+                        width: 430px;
+                        font-size: 2.95em;
+                        line-height: 1;
+                        // height: 200px;
+                        background-color: $mid-blue;
+                        padding: 0.2em 0.3em 0.2em 0.4em;
+                    }
+
+                    @include respond(largedesktop){
+                        font-size: 3.5em;
+                    }
+                }
+
+                .site-desc{ //An elegant multipage websites... 
+                    margin-bottom: 2em;
+                    font-size: 1em;
+                    max-width: 340px;
+
+                    @include respond(tablet){
+                        font-size: 1.1em;
+                    }
+
+                    @include respond(desktop){
+                        margin-bottom: 1em;
+                    }
+                }
+
+                .site-techgroup{ //Group for the site tech and live site / github code 
+
+                        @include respond(tablet){
+                            display: flex;
+                            justify-content: space-between;
+                        }
+
+                        @include respond(desktop){
+                            display: initial;
+                        }
+
+                    .tech-list{ //ul - GSAP SCSS JavaScript jQuery
+
+                        display: flex;
+                        margin-bottom: 1em;
+
+                        @include respond(tablet){
+                            line-height: 2.1;
+                            margin: 0;
+                        }
+
+                        @include respond(desktop){
+                            justify-content: flex-end;
+                        }
+
+                        .tech-item{ //li
+                            list-style: none;
+                            font-size: 0.8em;
+                            
+                            &:not(:last-child){
+                                margin-right: 1em;
+                            }
+                        }
+                    }
+
+                    .links{ //group of the live site and code links    
+
+                        .link{ //Live Demo ... Github Code
+                            color: $light-grey;
+                            text-decoration: none;
+                            transition: color 150ms ease-in-out;
+
+                            &:not(:last-child){
+                                margin-right: 1em;
+                            }
+
+                            &:hover{
+                                color: $accent-blue;
+                            }
+                        }                        
+                        
+                    }
+
+                }
+    
+            }
+    
         }
-            
-        
+
     }
 
-    
 }

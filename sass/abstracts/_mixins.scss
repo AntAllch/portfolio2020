@@ -46,6 +46,20 @@
     }
 }
 
+@mixin center-image(){
+    background: {
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin centertop-image(){
+    background: {
+        size: cover;
+        position: top;
+    }
+}
+
 
 
 
