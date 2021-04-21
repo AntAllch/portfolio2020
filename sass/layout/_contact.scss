@@ -1,0 +1,112 @@
+.contact{
+
+    background-color: $white;
+    color: $dark-blue;
+    padding: 10em 0;
+
+    
+    .contact-group{
+        
+        @include respond(desktop){
+            // background-color: yellowgreen;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-group{ //GET IN TOUCH, Thanks for taking the time.., Form
+
+            flex-grow: 1;
+
+            @include respond(desktop){
+                padding-right: 2em;
+            }
+            
+            .name-email{
+        
+                @include respond(desktop){
+                    display: flex;
+                    justify-content: space-between;
+                }
+        
+                .name-group,
+                .email-group{
+        
+                    @include respond(desktop){
+                        // background-color: aquamarine;
+                        width: 49%;
+                    }
+                }
+            }
+        
+            .contact-title{
+                margin-bottom: 1rem;
+                text-transform: uppercase;
+        
+                @include respond(desktop){
+                    font-size: 2.95em;
+                }
+            }
+        
+            .contact-desc{
+                margin-bottom: 1.5em;
+                font-weight: $fw-regular;
+                max-width: 320px;
+            }
+            
+            form{
+                
+                @include respond(desktop){
+                    max-width: 674px;
+                }
+            }
+            
+            label,
+            .contact-desc{
+                font-size: 1.1em;
+            }
+            
+            label,
+            input{
+                display: block;
+            }
+            
+            input,
+            textarea{
+                width: 100%;
+                padding: 0.5em;
+                border: 1px solid rgba($dark-blue, .2);
+            }
+            
+            input{
+                margin-bottom: 1em;
+            }
+            
+            textarea{
+                resize: none;
+                height: 200px;
+                margin-bottom: 2em;
+            }
+        }
+        
+        .contact-logo{
+        
+            // background-color: teal;
+            display: none;
+            
+            @include respond(desktop){
+                display: flex;
+                justify-content: flex-end;
+            }
+        
+            svg{
+
+                path{
+                    fill: $dark-blue;
+                }
+
+            }
+        }
+        
+    }
+
+}

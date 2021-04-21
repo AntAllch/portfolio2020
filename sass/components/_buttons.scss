@@ -26,6 +26,10 @@
     }
 }
 
-// .contact-btn{
-
-// }
+.btn-submit{
+    padding: 1em 2em;
+    font-size: 1.1em;
+    color: $dark-blue;
+    background-color: white;
+    border: 1px solid rgba($dark-blue, 0.2);
+}
