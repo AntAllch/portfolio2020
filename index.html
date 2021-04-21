@@ -154,24 +154,24 @@
                     <p class="contact-desc">Thanks for taking the time to contact me today.
                         What can I help you with?</p>
                         
-                    <form action="">
+                    <form action="POST" data-netlify="true">
                         
                         <div class="name-email">
                             <div class="name-group">
                                 <label for="name">Name</label>
-                                <input type="text" id="name">
+                                <input type="text" id="name" name="name">
                             </div>
                             <div class="email-group">
                                 <label for="email">Email</label>
-                                <input type="text" id="email">
+                                <input type="email" name="email" id="email" required>
                             </div>
                         </div>
                         
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject">
+                        <input type="text" id="subject" name="subject">
                         
                         <label for="message">What can I help you with?</label>
-                        <textarea name="" id="message"></textarea>
+                        <textarea name="message" id="message" required></textarea>
                         
                         <button class="btn-submit" type="submit">Submit Enquiry</button>
                     </form>
