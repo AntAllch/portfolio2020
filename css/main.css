@@ -372,6 +372,7 @@ header .header-links .link {
   margin-bottom: 0.7em;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 @media screen and (min-width: 600px) {
   .work .website-groups .website-group .website-img {
@@ -382,6 +383,7 @@ header .header-links .link {
   .work .website-groups .website-group .website-img {
     height: 420px;
     border-radius: 3px 3px 3px 3px;
+    margin-bottom: 0;
   }
 }
 .work .website-groups .website-group .website-info {
