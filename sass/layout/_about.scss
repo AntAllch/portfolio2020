@@ -11,6 +11,7 @@
 
     @include respond(desktop){
         padding: 5em 0 8em;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); //TL TR BR BL, X Y - Clockwise direction
     }
 
     .about-container{

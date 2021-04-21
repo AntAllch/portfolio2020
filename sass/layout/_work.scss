@@ -3,17 +3,29 @@
     color: $light-grey;
     padding: 6em 0;
 
-    .work-title{
+    .work-title{ //Here are a couple of things I built
         margin-bottom: 4.5em;
         position: relative;
+        width: 100%;
+        max-width: 480px;
 
-        &::before{
+        @include respond(desktop){
+            max-width: 100%;
+        }
+
+        &::before{ //Line underneath and to the right of ".work-title" element
             content: "";
             width: 80%;
             height: 1px;
             background-color: $light-grey;
             position: absolute;
-            top: 120px;
+            bottom: -70%;
+
+            @include respond(desktop){
+                width: 40%;
+                bottom: 40%;
+                right: 0;
+            }
         }
     }
     
@@ -70,7 +82,7 @@
                     align-items: flex-end;
                     background-color: transparent;
                     width: 40%;
-                    padding-top: 3em;
+                    padding: 3em 0 0 1em;
                 }
     
                 .site-title{ //LEWIS LANDON PHOTOGRAPHY, ARCH STUDIO

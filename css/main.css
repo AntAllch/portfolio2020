@@ -200,6 +200,8 @@ header .header-links .link {
 @media screen and (min-width: 1000px) {
   .about {
     padding: 5em 0 8em;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
   }
 }
 @media screen and (min-width: 1000px) {
@@ -318,6 +320,13 @@ header .header-links .link {
 .work .work-title {
   margin-bottom: 4.5em;
   position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+@media screen and (min-width: 1000px) {
+  .work .work-title {
+    max-width: 100%;
+  }
 }
 .work .work-title::before {
   content: "";
@@ -325,7 +334,14 @@ header .header-links .link {
   height: 1px;
   background-color: #F2F2F2;
   position: absolute;
-  top: 120px;
+  bottom: -70%;
+}
+@media screen and (min-width: 1000px) {
+  .work .work-title::before {
+    width: 40%;
+    bottom: 40%;
+    right: 0;
+  }
 }
 @media screen and (min-width: 1000px) {
   .work .website-groups .right {
@@ -387,7 +403,7 @@ header .header-links .link {
             align-items: flex-end;
     background-color: transparent;
     width: 40%;
-    padding-top: 3em;
+    padding: 3em 0 0 1em;
   }
 }
 .work .website-groups .website-group .website-info .site-title {
