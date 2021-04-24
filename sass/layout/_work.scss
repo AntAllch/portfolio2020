@@ -28,7 +28,16 @@
             }
         }
     }
-    
+
+    .spacing > * + * { //This selects all child elements within the "spacing" class and adds a margin top to any sibling that directly follows another sibling
+
+        margin-top: 3em;
+
+        @include respond(desktop){
+            margin-top: 6em;
+        }
+    }
+
     .website-groups{
 
         .right{
@@ -41,16 +50,16 @@
 
             position: relative;
 
-            &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 4em
-                margin-bottom: 3em;
-            }
+            // &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 3em
+            //     margin-bottom: 3em;
+            // }
 
             @include respond(desktop){
                 display: flex;
 
-                &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 6em
-                    margin-bottom: 6em;
-                }
+                // &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 6em
+                //     margin-bottom: 6em;
+                // }
             }
     
             .website-img{
@@ -162,7 +171,12 @@
                         }
                     }
 
-                    .links{ //group of the live site and code links    
+                    .links{ //group of the live site and code links   
+                    
+                        @include respond(desktop){
+                            padding: 0.5em 1em;
+                            background-color: $mid-blue;
+                        }
 
                         .link{ //Live Demo ... Github Code
                             color: $light-grey;

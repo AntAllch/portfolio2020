@@ -42,6 +42,9 @@
 .btn,
 .btn-submit {
   cursor: pointer;
+  -webkit-transition: color 150ms ease-in-out;
+  -o-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
 }
 
 .header-btn {
@@ -346,6 +349,14 @@ header .header-links .link {
     right: 0;
   }
 }
+.work .spacing > * + * {
+  margin-top: 3em;
+}
+@media screen and (min-width: 1000px) {
+  .work .spacing > * + * {
+    margin-top: 6em;
+  }
+}
 @media screen and (min-width: 1000px) {
   .work .website-groups .right {
     text-align: right;
@@ -354,17 +365,11 @@ header .header-links .link {
 .work .website-groups .website-group {
   position: relative;
 }
-.work .website-groups .website-group:not(:last-of-type) {
-  margin-bottom: 3em;
-}
 @media screen and (min-width: 1000px) {
   .work .website-groups .website-group {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-  }
-  .work .website-groups .website-group:not(:last-of-type) {
-    margin-bottom: 6em;
   }
 }
 .work .website-groups .website-group .website-img {
@@ -493,6 +498,12 @@ header .header-links .link {
 }
 .work .website-groups .website-group .website-info .site-techgroup .tech-list .tech-item:not(:last-child) {
   margin-right: 1em;
+}
+@media screen and (min-width: 1000px) {
+  .work .website-groups .website-group .website-info .site-techgroup .links {
+    padding: 0.5em 1em;
+    background-color: #153051;
+  }
 }
 .work .website-groups .website-group .website-info .site-techgroup .links .link {
   color: #F2F2F2;
