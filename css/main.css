@@ -88,8 +88,11 @@ header {
 }
 @media screen and (min-width: 1000px) {
   header {
-    background-color: #0A192F;
+    background-color: rgba(10, 25, 47, 0.9);
     padding: 1em 0;
+    -webkit-transition: 250ms ease-in-out;
+    -o-transition: 250ms ease-in-out;
+    transition: 250ms ease-in-out;
   }
 }
 header svg {

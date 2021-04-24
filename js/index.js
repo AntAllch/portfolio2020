@@ -1,10 +1,14 @@
-// const navToggle = document.querySelector(".nav-toggle");
-// const navLinks = document.querySelector(".nav-link");
+var lastScrollTop = 0;
+const header = document.querySelector("header");
 
-// navToggle.addEventListener("click", () => {
-//     document.body.classList.toggle("nav-open");
-// });
+window.addEventListener("scroll", () => {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-// navLinks.addEventListener("click", () => {
-//     document.body.classList.remove("nav-open");
-// });
+    if(scrollTop > lastScrollTop){
+        header.style.top = "-10%";
+    } else{
+        header.style.top = "0";
+    }
+
+    lastScrollTop = scrollTop;
+})
