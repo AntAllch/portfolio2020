@@ -5,7 +5,7 @@ window.addEventListener("scroll", () => {
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if(scrollTop > lastScrollTop){
-        header.style.top = "-10%";
+        header.style.top = "-20%";
     } else{
         header.style.top = "0";
     }
