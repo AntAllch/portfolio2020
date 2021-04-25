@@ -515,7 +515,7 @@ header .header-links .link {
 .work .website-groups .website-group .website-info .site-techgroup .links .link:not(:last-child) {
   margin-right: 1em;
 }
-.work .website-groups .website-group .website-info .site-techgroup .links .link:hover {
+.work .website-groups .website-group .website-info .site-techgroup .links .link:hover, .work .website-groups .website-group .website-info .site-techgroup .links .link:focus {
   color: #48cae4;
 }
 
