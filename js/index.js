@@ -1,4 +1,4 @@
-//Nav appear on scroll up
+//Nav appear on scroll up - Vanilla JavaScript
 var lastScrollTop = 0;
 const header = document.querySelector("header");
 
@@ -15,7 +15,7 @@ window.addEventListener("scroll", () => {
 })
 
 
-//Parallax BG
+//Parallax BG - jQuery
 $(window).scroll(function() {
     parallax();
 })
