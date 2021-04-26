@@ -50,16 +50,8 @@
 
             position: relative;
 
-            // &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 3em
-            //     margin-bottom: 3em;
-            // }
-
             @include respond(desktop){
                 display: flex;
-
-                // &:not(:last-of-type){ //This makes sure that every website-group except the LAST one, has a margin-bottom of 6em
-                //     margin-bottom: 6em;
-                // }
             }
     
             .website-img{

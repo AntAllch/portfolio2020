@@ -7,24 +7,15 @@
     // padding-top: 13em;
     height: 100vh;
     text-align: center;
+    display: flex;
+    align-items: center;
     
     @include respond(tablet){
         text-align: left;
-        // padding-top: 20em;
     }
-
-    
+       
     .hero-content{
-        padding-top: 13em;
 
-        @include respond(tablet){
-            padding-top: 20em;
-        }
-
-        @include respond(desktop){
-            padding-top: 50%;
-            transform: translateY(-25%);
-        }
 
         .hero-title{
 

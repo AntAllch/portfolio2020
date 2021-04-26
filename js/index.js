@@ -43,15 +43,11 @@ const aboutOptions = {threshold: 0.5};
 const aboutObserver = new IntersectionObserver(function(entries, aboutObserver) {
     entries.forEach(entry => {
         if(entry.isIntersecting){
-
             aboutMeGroup.classList.add("fade-in-left");
-
             setTimeout(function(){
                 skillsGroup.classList.add("fade-in-left");
-            }, 100);
-
+            }, 400);
             aboutObserver.unobserve(entry.target);
-
         } else {
             return;
         }

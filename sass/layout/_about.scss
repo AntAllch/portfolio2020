@@ -35,8 +35,8 @@
     .aboutme-group{
         margin-bottom: 4em;
         opacity: 0;
-        transform: translateX(-20px);
-        transition: $transition-opacity, $transition-transform;
+        transform: translateY(20px);
+        transition: $transition-opacity, transform 750ms cubic-bezier(.24,.04,0,.97);
         
         @include respond(desktop){
             margin-right: 6em;
@@ -59,8 +59,8 @@
     .skills-group{
         
         opacity: 0;
-        transform: translateX(-20px);
-        transition: $transition-opacity, $transition-transform;
+        transform: translateY(20px);
+        transition: $transition-opacity, transform 750ms cubic-bezier(.24,.04,0,.97);
         
         
         .skills-list{ //ul
@@ -101,7 +101,7 @@
     .fade-in-left,
     .fade-in-right{
         opacity: 1;
-        transform: translateX(0);
+        transform: translateY(0);
     }
     
     .design-group{
