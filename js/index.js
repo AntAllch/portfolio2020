@@ -37,14 +37,21 @@ const aboutMeGroup = document.querySelector(".aboutme-group");
 const skillsGroup = document.querySelector(".skills-group");
 
 //Intersectional Observers Options
-const aboutOptions = {threshold: 0};
+const aboutOptions = {threshold: 0.5};
 
 //Home Nav Observer
 const aboutObserver = new IntersectionObserver(function(entries, aboutObserver) {
     entries.forEach(entry => {
         if(entry.isIntersecting){
-            aboutMeGroup.classList.add("fade-in");
+
+            aboutMeGroup.classList.add("fade-in-left");
+
+            setTimeout(function(){
+                skillsGroup.classList.add("fade-in-left");
+            }, 100);
+
             aboutObserver.unobserve(entry.target);
+
         } else {
             return;
         }

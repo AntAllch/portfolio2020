@@ -4,27 +4,27 @@
     color: $dark-blue;
     text-align: center;
     padding: 4em 0 10em;
-
+    
     @include respond(tablet){
         text-align: left;
     }
-
+    
     @include respond(desktop){
         padding: 5em 0 8em;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%); //TL TR BR BL, X Y - Clockwise direction
     }
-
+    
     .about-container{
-
+        
         @include respond(desktop){
             display: flex;
         }
     }
-
+    
     .about-title{
         margin-bottom: 1rem;
     }
-
+    
     .skills-subtitle{
         text-transform: capitalize;
         font-size: 1.3em;
@@ -35,8 +35,8 @@
     .aboutme-group{
         margin-bottom: 4em;
         opacity: 0;
-        transition: opacity 250s ease-in;
-        
+        transform: translateX(-20px);
+        transition: $transition-opacity, $transition-transform;
         
         @include respond(desktop){
             margin-right: 6em;
@@ -51,16 +51,17 @@
         }
     }
     
-    .fade-in{
-        opacity: 1;
-    }
     
     .frontend-group{
         margin-bottom: 1.7em;
     }
     
-    
     .skills-group{
+        
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: $transition-opacity, $transition-transform;
+        
         
         .skills-list{ //ul
             display: flex;
@@ -97,9 +98,14 @@
         
     }
     
-
+    .fade-in-left,
+    .fade-in-right{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
     .design-group{
-
+        
         .design-list{ //ul
             display: flex;
             justify-content: center;
@@ -107,17 +113,17 @@
             width: 100%;
             max-width: 180px;
             margin: 0 auto;
-
+            
             @include respond(tablet){
                 margin: 0;
                 justify-content: flex-start;
             }
         }
-
+        
         .design-item{ //li
             list-style: none;
             width: 35px;
-
+            
             &:not(:last-of-type){
                 margin-right: 0.8em;
             }

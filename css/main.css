@@ -229,9 +229,14 @@ header .header-links .link {
 .about .aboutme-group {
   margin-bottom: 4em;
   opacity: 0;
-  -webkit-transition: opacity 250s ease-in;
-  -o-transition: opacity 250s ease-in;
-  transition: opacity 250s ease-in;
+  -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+  transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+  -o-transition: opacity 500ms ease-in, transform 500ms ease-in;
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+  transition: opacity 500ms ease-in, transform 500ms ease-in, -webkit-transform 500ms ease-in;
 }
 @media screen and (min-width: 1000px) {
   .about .aboutme-group {
@@ -246,11 +251,19 @@ header .header-links .link {
     max-width: 390px;
   }
 }
-.about .fade-in {
-  opacity: 1;
-}
 .about .frontend-group {
   margin-bottom: 1.7em;
+}
+.about .skills-group {
+  opacity: 0;
+  -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
+  -webkit-transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+  transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+  -o-transition: opacity 500ms ease-in, transform 500ms ease-in;
+  transition: opacity 500ms ease-in, transform 500ms ease-in;
+  transition: opacity 500ms ease-in, transform 500ms ease-in, -webkit-transform 500ms ease-in;
 }
 .about .skills-group .skills-list {
   display: -webkit-box;
@@ -289,6 +302,13 @@ header .header-links .link {
 }
 .about .skills-group .skills-item:nth-of-type(5) {
   width: 85px;
+}
+.about .fade-in-left,
+.about .fade-in-right {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .about .design-group .design-list {
   display: -webkit-box;
