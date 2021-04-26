@@ -31,31 +31,37 @@
         font-weight: $fw-semibold;
         margin-bottom: 0.5rem;
     }
-
+    
     .aboutme-group{
         margin-bottom: 4em;
-
+        opacity: 0;
+        transition: opacity 250s ease-in;
+        
         
         @include respond(desktop){
             margin-right: 6em;
         }
-
+        
         .aboutme-desc{
             font-size: 1.1em;
-
+            
             @include respond(tablet){
                 max-width: 390px;
             }
         }
     }
-
+    
+    .fade-in{
+        opacity: 1;
+    }
+    
     .frontend-group{
         margin-bottom: 1.7em;
     }
-
-
+    
+    
     .skills-group{
-
+        
         .skills-list{ //ul
             display: flex;
             align-items: flex-end;
@@ -63,33 +69,34 @@
             width: 100%;
             max-width: 300px;
             margin: 0 auto;
-
+            
             @include respond(tablet){
                 margin: 0;
                 justify-content: flex-start;
             }
         }
-
+        
         .skills-item{ //li
             list-style: none;
             width: 38px;
-
+            
             &:nth-of-type(3){ //SASS Icon
                 width: 60px;
             }
-
+            
             &:nth-of-type(4){ //JS Icon
                 width: 43px;
             }
-
+            
             &:nth-of-type(5){ //jQuery Icon
                 width: 85px;
             }
-
+            
             transform: scale(0.8); //Makes sure all the front-end icons scale up together
         }
-
+        
     }
+    
 
     .design-group{
 

@@ -27,3 +27,29 @@ function parallax(){
     $(".parallax-bg").css("background-position", "center "+(wScroll*0.5)+"px")
 
 }
+
+
+//Intersection Observers
+
+//About Variables
+const about = document.querySelector(".about");
+const aboutMeGroup = document.querySelector(".aboutme-group");
+const skillsGroup = document.querySelector(".skills-group");
+
+//Intersectional Observers Options
+const aboutOptions = {threshold: 0};
+
+//Home Nav Observer
+const aboutObserver = new IntersectionObserver(function(entries, aboutObserver) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            aboutMeGroup.classList.add("fade-in");
+            aboutObserver.unobserve(entry.target);
+        } else {
+            return;
+        }
+        console.log(entry.target);
+    });
+}, aboutOptions);
+
+aboutObserver.observe(about);

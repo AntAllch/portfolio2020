@@ -228,6 +228,10 @@ header .header-links .link {
 }
 .about .aboutme-group {
   margin-bottom: 4em;
+  opacity: 0;
+  -webkit-transition: opacity 250s ease-in;
+  -o-transition: opacity 250s ease-in;
+  transition: opacity 250s ease-in;
 }
 @media screen and (min-width: 1000px) {
   .about .aboutme-group {
@@ -241,6 +245,9 @@ header .header-links .link {
   .about .aboutme-group .aboutme-desc {
     max-width: 390px;
   }
+}
+.about .fade-in {
+  opacity: 1;
 }
 .about .frontend-group {
   margin-bottom: 1.7em;
