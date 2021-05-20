@@ -63,6 +63,10 @@
                 object-fit: cover;
                 display: block;
 
+                
+                
+
+
                 @include respond(tablet){
                     height: 320px;
                 }
