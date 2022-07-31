@@ -392,7 +392,6 @@ header .header-links .link {
 .work .website-groups .website-group .website-img {
   width: 100%;
   height: 200px;
-  background-color: cyan;
   border-radius: 3px 3px 0 0;
   margin-bottom: 0.7em;
   -o-object-fit: cover;
@@ -407,7 +406,7 @@ header .header-links .link {
 @media screen and (min-width: 1000px) {
   .work .website-groups .website-group .website-img {
     height: 420px;
-    border-radius: 3px 3px 3px 3px;
+    border-radius: 3px;
     margin-bottom: 0;
   }
 }

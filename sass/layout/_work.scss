@@ -57,23 +57,18 @@
             .website-img{
                 width: 100%;
                 height: 200px;
-                background-color: cyan;
                 border-radius: 3px 3px 0 0; //TL TR BR BL
                 margin-bottom: 0.7em;
                 object-fit: cover;
                 display: block;
-
                 
-                
-
-
                 @include respond(tablet){
                     height: 320px;
                 }
-
+                
                 @include respond(desktop){
                     height: 420px;
-                    border-radius: 3px 3px 3px 3px; //TL TR BR BL
+                    border-radius: 3px; //TL TR BR BL
                     margin-bottom: 0;
                 }
             }
