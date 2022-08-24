@@ -4,6 +4,11 @@
     transition: color 150ms ease-in-out;
 }
 
+.header-btn,
+.submit-btn{
+    transition: background-color 100ms ease-in-out;
+}
+
 .header-btn{
     background-color: $accent-blue;
     color: $dark-blue;
@@ -11,6 +16,10 @@
     border: none;
     font-weight: $fw-bold;
     font-size: 1em;
+
+    &:hover, &:focus-within{
+        background-color: $white;
+    }
 }
 
 .hero-btn{
@@ -28,10 +37,15 @@
     }
 }
 
-.btn-submit{
+.submit-btn{
     padding: 1em 2em;
     font-size: 1.1em;
     color: $dark-blue;
     background-color: white;
     border: 1px solid rgba($dark-blue, 0.2);
+
+    &:hover, &:focus-within{
+        background-color: $dark-blue;
+        color: $white;
+    }
 }
